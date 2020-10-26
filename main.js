@@ -19,22 +19,9 @@ window.onload = () => {
                                            order: ${i + 1};"
                                 ></div>`;
     });
-};
-
-const pullRight = () => {
-    const carouselItems = document.querySelectorAll('.carousel__item');
-
-    [...carouselItems].map(carouselItem => {
-        if (parseInt(carouselItem.style.order) === carouselItems.length) {
-            carouselItem.style.order = 1;
-            return;
-        }
-
-        carouselItem.style.order = parseInt(carouselItem.style.order) + 1;
-    });
 }
 
-const pullLeft = () => {
+const pullRight = () => {
     const carouselItems = document.querySelectorAll('.carousel__item');
 
     [...carouselItems].map(carouselItem => {
@@ -44,5 +31,18 @@ const pullLeft = () => {
         }
 
         carouselItem.style.order = parseInt(carouselItem.style.order) - 1;
+    });
+}
+
+const pullLeft = () => {
+    const carouselItems = document.querySelectorAll('.carousel__item');
+
+    [...carouselItems].map(carouselItem => {
+        if (parseInt(carouselItem.style.order) === carouselItems.length) {
+            carouselItem.style.order = 1;
+            return;
+        }
+
+        carouselItem.style.order = parseInt(carouselItem.style.order) + 1;
     });
 }
