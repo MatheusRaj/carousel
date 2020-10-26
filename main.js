@@ -16,8 +16,7 @@ window.onload = () => {
                                            background-size: cover;
                                            background-repeat: no-repeat;
                                            background-position: center;
-                                           order: ${i + 1};
-                                           transition: all 1s ease;"
+                                           order: ${i + 1};"
                                 ></div>`;
     });
 };
