@@ -34,9 +34,30 @@ body {
     z-index: 10;
 }
 
+@media screen and (max-width: 680px) {
+    #carousel {
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 681px) and (max-width: 980px) {
+    #carousel {
+        width: 600px;
+    }
+}
+
 #carousel > .carousel__item {
     width: 300px;
     height: 200px;
+}
+
+.arrow__wrap {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .arrow {
@@ -44,7 +65,6 @@ body {
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
-    cursor: pointer;
 }
 
 .right {
